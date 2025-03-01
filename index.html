@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penumathsa Sai Manikanta Varma - Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #000428, #004e92);
+            color: white;
+            text-align: center;
+            transition: background 0.5s ease-in-out;
+        }
+        header {
+            background: black;
+            color: white;
+            padding: 30px 10px;
+            font-size: 28px;
+            font-weight: bold;
+            animation: fadeIn 1.5s ease-in;
+        }
+        .mode-toggle {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+        }
+        .toggle-switch {
+            display: inline-block;
+            width: 50px;
+            height: 25px;
+            position: relative;
+        }
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 25px;
+        }
+        .slider:before {
+            content: "";
+            position: absolute;
+            height: 18px;
+            width: 18px;
+            left: 4px;
+            bottom: 3px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+        input:checked + .slider:before {
+            transform: translateX(24px);
+        }
+        .light-mode {
+            background: white;
+            color: black;
+        }
+        section {
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+            padding: 30px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+            text-align: left;
+        }
+        section:hover {
+            transform: translateY(-5px);
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .social-icons a {
+            margin: 10px;
+            color: white;
+            font-size: 24px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+        a {
+            color: #00CFFF;
+            text-decoration: none;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body class="dark-mode">
+    <header>
+        <h1>Penumathsa Sai Manikanta Varma</h1>
+        <p>Aspiring Software Engineer | Passionate About AI & Web Development</p>
+    </header>
+    
+    <div class="mode-toggle">
+        <label class="toggle-switch">
+            <input type="checkbox" id="modeSwitch">
+            <span class="slider"></span>
+        </label>
+    </div>
+    
+    <section>
+        <h2>About Me</h2>
+        <p>I am a B.Tech student specializing in Computer Science Engineering with expertise in C, Java, HTML, CSS, PHP, and MySQL. Passionate about problem-solving, backend development, and AI-driven applications.</p>
+    </section>
+    
+    <section>
+        <h2>Skills</h2>
+        <ul>
+            <li>Programming: C, Java, HTML, CSS, PHP</li>
+            <li>Database: MySQL</li>
+            <li>Microsoft Office: PowerPoint, Excel, MS Word</li>
+            <li>Soft Skills: Teamwork, Adaptability, Active Listening</li>
+        </ul>
+    </section>
+    
+    <section>
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>Student Event Dashboard</strong> - A web-based platform for event tracking using PHP & MySQL.</li>
+            <li><strong>Proximity Management using AI</strong> - AI-based social distancing detector with YOLO & OpenCV.</li>
+            <li><strong>Blind Guidance Glasses</strong> - Ultrasonic sensor-based assistive technology for the visually impaired.</li>
+        </ul>
+    </section>
+    
+    <section>
+        <h2>Education</h2>
+        <p><strong>B.Tech in Computer Science Engineering</strong> - Vel Tech Rangarajan Dr. Sagunthala R&D Institute (CGPA: 8.3)</p>
+        <p><strong>Senior Secondary</strong> - Sri Chaitanya Junior College (77%)</p>
+        <p><strong>Secondary Education</strong> - Sri Chaitanya High School (96%)</p>
+    </section>
+    
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:saimanikantavarma04@gmail.com">saimanikantavarma04@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/sai-manikanta-varma-41534b201/" target="_blank">linkedin.com/in/sai-manikanta-varma</a></p>
+        <p>GitHub: <a href="https://github.com/manikantavarma2889" target="_blank">github.com/manikantavarma2889</a></p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/sai-manikanta-varma-41534b201/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/manikantavarma2889" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:saimanikantavarma04@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </section>
+    
+    <script>
+        const modeSwitch = document.getElementById("modeSwitch");
+        modeSwitch.addEventListener("change", function() {
+            document.body.classList.toggle("light-mode");
+        });
+    </script>
+</body>
+</html>
