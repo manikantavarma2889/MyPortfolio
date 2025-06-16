@@ -30,12 +30,12 @@
     }
 
     header h1 {
-      font-size: 2.8em;
+      font-size: 2.5em;
       margin-bottom: 10px;
     }
 
     header p {
-      font-size: 1.2em;
+      font-size: 1.1em;
       font-weight: 600;
     }
 
@@ -44,15 +44,17 @@
       padding: 12px 0;
       text-align: center;
       border-bottom: 2px solid #0074D9;
+      flex-wrap: wrap;
     }
 
     nav a {
       color: white;
-      margin: 0 20px;
+      margin: 10px 15px;
       text-decoration: none;
       font-weight: bold;
       font-size: 1em;
       transition: color 0.3s ease;
+      display: inline-block;
     }
 
     nav a:hover {
@@ -121,12 +123,18 @@
       overflow-x: auto;
       gap: 20px;
       padding-top: 10px;
+      scrollbar-width: none;
+    }
+
+    .slideshow::-webkit-scrollbar {
+      display: none;
     }
 
     .slideshow .certificate {
       flex: 0 0 auto;
       text-align: center;
       transition: transform 0.3s ease-in-out;
+      max-width: 180px;
     }
 
     .slideshow .certificate:hover {
@@ -134,7 +142,9 @@
     }
 
     .slideshow img {
-      height: 200px;
+      height: 180px;
+      width: 100%;
+      object-fit: cover;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     }
@@ -143,6 +153,7 @@
       margin-top: 8px;
       font-weight: bold;
       color: #fff;
+      font-size: 0.9em;
     }
 
     footer {
@@ -164,15 +175,67 @@
       text-decoration: underline;
     }
 
-    @media (max-width: 650px) {
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      header p {
+        font-size: 1em;
+      }
+
       nav a {
-        margin: 0 10px;
+        margin: 8px 10px;
         font-size: 0.9em;
+      }
+
+      .slideshow img {
+        height: 150px;
+      }
+
+      .slideshow .certificate {
+        max-width: 140px;
+      }
+
+      h2 {
+        font-size: 1.5em;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav a {
+        flex: 1 1 100%;
+        margin: 6px 0;
+        font-size: 0.95em;
+      }
+
+      main {
+        padding: 0 10px;
+      }
+
+      .slideshow {
+        gap: 10px;
+      }
+
+      .slideshow img {
+        height: 130px;
+      }
+
+      .slideshow .certificate {
+        max-width: 120px;
       }
     }
   </style>
 </head>
 <body>
+
+
 
   <header>
     <h1>Penumathsa Sai Manikanta Varma</h1>
@@ -269,6 +332,7 @@
     &copy; 2025 Penumathsa Sai Manikanta Varma. All rights reserved.
   </footer>
 
+  <!-- Font Awesome Icons -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
 </body>
 </html>
